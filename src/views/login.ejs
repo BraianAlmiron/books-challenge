@@ -31,6 +31,7 @@
                 <div class="col-md-9 pe-5">
   
                   <input type="email" name="email" class="form-control form-control-lg" placeholder="example@gmail.com" />
+                  <small class="text-danger ms-2"><%= (locals.errors && errors.email) && errors.email.msg %></small>
   
                 </div>
               </div>
@@ -46,8 +47,11 @@
                 <div class="col-md-9 pe-5">
   
                   <input type="password" name="password" class="form-control form-control-lg" >
+                  <small class="text-danger ms-2"><%= (locals.errors && errors.password) && errors.password.msg %></small>
   
                 </div>
+                <input type="checkbox" placeholder="" name="remember">
+                      <span>Recordame</span>
               </div>
   
               <hr class="mx-n3">
