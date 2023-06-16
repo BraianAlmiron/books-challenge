@@ -24,11 +24,16 @@
 
 
       <div class="list-group">
-        <% books.forEach(({title,id}) => { %>
-          <a href="/books/detail/<%= id %>" class="list-group-item list-group-item-action">
-            <%= title %>
-          </a>
-        <% }) %>
+        <% if (books.length > 0) { %>
+          <% books.forEach(({title,id}) => { %>
+            <a href="/books/detail/<%= id %>" class="list-group-item list-group-item-action">
+              <%= title %>
+            </a>
+          <% }) %>
+        <% }else{ %>
+          <h2>No se encontraron resultados para su búsqueda</h2>
+        
+        <% } %>
       </div>
   </div>
 </div>

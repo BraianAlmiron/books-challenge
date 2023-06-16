@@ -45,32 +45,7 @@ const mainController = {
   })},
   deleteBook: (req, res) => {
     // Implement delete book
-    const {id} = req.params.id;
-
-  // Eliminar todas las filas relacionadas en la tabla "booksauthors"
-  db.Author.destroy({
-    where: { id: AuthorId }
-  })
-    .then(() => {
-      // Luego de eliminar las filas relacionadas, puedes eliminar el libro
-      db.Book.destroy({
-        where: { id: bookId }
-      })
-        .then(() => {
-          // Redirige a la página principal o muestra un mensaje de éxito según tus necesidades
-          res.redirect('/books');
-        })
-        .catch((error) => {
-          console.log(error);
-          // Muestra un error o redirige en caso de algún problema durante la eliminación del libro
-          res.status(500).send('Error al eliminar el libro');
-        });
-    })
-    .catch((error) => {
-      console.log(error);
-      // Muestra un error o redirige en caso de algún problema durante la eliminación de las filas relacionadas
-      res.status(500).send('Error al eliminar las filas relacionadas');
-    });
+    
 },
   authors: (req, res) => {
     db.Author.findAll()
