@@ -45,13 +45,23 @@ const mainController = {
   })},
   deleteBook: (req, res) => {
     // Implement delete book
-    db.Book.destroy({
+
+    db.BooksAuthors.destroy({
       where : {
-        id: req.params.id
-      },
-      
-    }).then(() => res.redirect('/'))
-    .catch(error => console.log(error))
+        BookId : req.params.id
+      }
+    }).then((response) => {
+      if (response){
+        db.Book.destroy({
+          where : {
+            id: req.params.id
+          },
+          force : true
+          
+        }).then(() => res.redirect('/'))
+      }
+   
+    }).catch(error => console.log(error))
 },
   authors: (req, res) => {
     db.Author.findAll()

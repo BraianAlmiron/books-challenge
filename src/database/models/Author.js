@@ -26,7 +26,7 @@ module.exports = (sequelize, dataTypes) => {
       through: 'BooksAuthors',
       foreingKey: 'AuthorId',
       otherKey: 'BookId',
-      timestamps: false
+      timestamps: false,
     });
   };
 

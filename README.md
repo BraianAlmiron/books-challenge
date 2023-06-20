@@ -24,10 +24,21 @@ La app tiene 3 secciones principales
 2. Busqueda de libros: Desarrollar la funcionalidad de busqueda, para esto utilizaremos el formulario de busqueda que se encuentra en la vista de `search.ejs`. Debemos escuchar las peticiones POST sobre la ruta `/books/search` y con el campo `title` del body buscar en la base de datos los libros que tengan un titulo similar.
 3. Libros de un autor: implementar la vista de `authorBooks.ejs` a la cual llegamos haciendo click en un autor, esta vista debera listar todos los libros de un determinado autor en particular, leyendo su Id por parametro.
 4. Edicion de libros: Implementar el formulario de edicion de libros, tener en cuenta que solo un usuario administrador debera tener acceso a esta funcionalidad (ocultar el boton para usuarios comunes).
-5. Eliminacion de libros: Implementar el boton de eliminación en el detalle de libros, tener en cuenta que solo los usuarios administradores pueden realizar esta accion.
+5. Eliminacion de libros: Implementar el boton de eliminación en el detalle de libros, tener en cuenta que solo los usuarios administradores pueden realizar esta accion. NO SE ELIMINA EL LIBRO!!!!
 6. Login y logout: Implementar la funcionalidad de login. Tener en cuenta:
    - El email debe estar registrado en la base de datos.
    - La contraseña debe ser la misma que la que guardamos en la base de datos (recordar que las contraseñas se guardan cifradas asi que deberemos hacer lo mismo para poder compararlas).
    - Al estar logueado debemos ver un botón de logout en lugar del botón de login que cerrará nuestra sesion.
    - Utilizar cookies para recordar el usuario logueado.
    - Distinguir entre usuarios estandar y administradores cuando corresponda según lo mencionado en puntos anteriores.
+
+# Feedback
+1. OK
+2. OK (No debería mostrarse el mensaje de "no encontrado" antes de hacer una búsqueda)
+3. OK
+4. OK
+5. No elimina el libro. Revisar la lógica. No se necesita eliminar el autor, solo el libro
+6. OK
+
+## Porcentaje logrado: 75%
+## Resultado: APROBADO
